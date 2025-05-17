@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PlatformService\PlatformService.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Dtos\" />
     <Folder Include="Data\" />
   </ItemGroup>

@@ -1,5 +1,5 @@
 # @PlatformService_HostAddress = http://localhost:5162
-@PlatformService_HostAddress = http://localhost:32303
+@PlatformService_HostAddress = http://localhost:32642
 
 GET {{PlatformService_HostAddress}}/weatherforecast/
 Accept: application/json
@@ -8,3 +8,13 @@ Accept: application/json
 
 GET {{PlatformService_HostAddress}}/api/Platforms
 Accept: application/json
+###
+POST {{PlatformService_HostAddress}}/api/Platforms
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Kubernetes",
+  "publisher": "Cloud Native Computing Foundation",
+  "cost": "Free"
+}

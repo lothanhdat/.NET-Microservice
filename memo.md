@@ -1,4 +1,4 @@
-dotnet --version
+﻿dotnet --version
 dotnet new webapi -n PlatformService
 
 code -r PlanformService
@@ -26,3 +26,25 @@ kubectl apply -f platforms-np-srv.yaml
 kubectl get services
 kubectl delete service platforms-np-srv.yaml
 https://youtu.be/DgVjEo3OGBI?t=13009
+
+
+
+----
+💡 Nói đơn giản:
+✅ Dùng async/await
+➡ Thread không bị block → được trả lại Thread Pool, có thể phục vụ request khác trong thời gian chờ I/O.
+➡ Khi gọi await client.GetAsync(...), thread ASP.NET được trả về pool. Sau khi có kết quả, hệ thống cấp lại thread để xử lý tiếp → tăng khả năng phục vụ đồng thời (scalability).
+
+❌ Không dùng async (code đồng bộ)
+➡ Thread bị block → bị “ngồi chờ” trong suốt thời gian xử lý I/O (ví dụ: gọi DB, đọc file…).
+➡ Thread của ASP.NET sẽ bị giữ chặt → không thể xử lý request nào khác.
+----
+
+
+docker build -t lothanhdat95/commandservice .
+docker push lothanhdat95/commandservice
+docker run -p 8080:8080 -d lothanhdat95/commandservice
+
+kubectl rollout restart deployment platforms-depl
+kubectl delete deployment platforms-depl
+kubectl delete deployment commands-depl

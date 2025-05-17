@@ -1,6 +1,6 @@
-@CommandsService_HostAddress = http://localhost:5194
+@CommandsService_HostAddress = https://localhost:7228
 
-GET {{CommandsService_HostAddress}}/weatherforecast/
+POST {{CommandsService_HostAddress}}/api/c/Platforms
 Accept: application/json
 
 ###
