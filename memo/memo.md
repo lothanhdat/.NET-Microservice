@@ -10,11 +10,11 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
 docker build -t lothanhdat95/platformservice .
+docker push lothanhdat95/platformservice
 docker run -p 8080:8080 -d lothanhdat95/platformservice
 docker ps
 docker stop a472f4598e63
 docker start a472f4598e63
-docker push lothanhdat95/platformservice
 
 kubectl version
 kubectl apply -f platforms-depl.yaml
@@ -48,3 +48,19 @@ docker run -p 8080:8080 -d lothanhdat95/commandservice
 kubectl rollout restart deployment platforms-depl
 kubectl delete deployment platforms-depl
 kubectl delete deployment commands-depl
+
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.2/deploy/static/provider/cloud/deploy.yaml
+thêm 127.0.0.1 acme.com vào host
+kubectl apply -f ingress-srv.yaml
+
+kubectl get storageclass
+kubectl apply -f local-pvc.yaml
+kubectl get pvc
+kubectl create secret generic mysql --from-literal=SA_PASSWORD="pa55Word!" 
+# luu y dat pass dung policy
+dotnet tool install --global dotnet-ef --version 8.*
+
+dotnet ef migrations add initialmigration
+
+dotnet add package RabbitMQ.Client

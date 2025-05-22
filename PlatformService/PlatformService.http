@@ -1,5 +1,6 @@
-# @PlatformService_HostAddress = http://localhost:5162
-@PlatformService_HostAddress = http://localhost:32642
+@PlatformService_HostAddress = http://localhost:5162
+# @PlatformService_HostAddress = http://localhost:32642
+@Product_HostAddress = http://acme.com
 
 GET {{PlatformService_HostAddress}}/weatherforecast/
 Accept: application/json
@@ -9,7 +10,22 @@ Accept: application/json
 GET {{PlatformService_HostAddress}}/api/Platforms
 Accept: application/json
 ###
+GET {{Product_HostAddress}}/api/Platforms
+Accept: application/json
+
+
+###
 POST {{PlatformService_HostAddress}}/api/Platforms
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Kubernetes",
+  "publisher": "Cloud Native Computing Foundation",
+  "cost": "Free"
+}
+###
+POST {{Product_HostAddress}}/api/Platforms
 Content-Type: application/json
 Accept: application/json
 

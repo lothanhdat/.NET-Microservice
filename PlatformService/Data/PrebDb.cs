@@ -1,8 +1,4 @@
-using System;
-using System.Linq;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using PlatformService.Models;
 
 namespace PlatformService.Data

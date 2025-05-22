@@ -1,6 +1,55 @@
-@CommandsService_HostAddress = https://localhost:7228
+@CommandsService_HostAddress = http://localhost:5194
+@Product_HostAddress = http://acme.com
 
 POST {{CommandsService_HostAddress}}/api/c/Platforms
 Accept: application/json
 
 ###
+
+GET {{CommandsService_HostAddress}}/api/c/Platforms
+Accept: application/json
+###
+
+GET {{CommandsService_HostAddress}}/api/c/Platforms/4/commands
+Accept: application/json
+
+###
+GET {{CommandsService_HostAddress}}/api/c/Platforms/1/commands/1
+Accept: application/json
+
+###
+POST {{CommandsService_HostAddress}}/api/c/Platforms/4/commands
+Content-Type: application/json
+Accept: application/json
+
+{
+  "HowTo": "Kubernetes",
+  "CommandLine": "Cloud Native Computing Foundation"
+}
+
+###############
+POST {{Product_HostAddress}}/api/c/Platforms
+Accept: application/json
+
+###
+
+GET {{Product_HostAddress}}/api/c/Platforms
+Accept: application/json
+###
+
+GET {{Product_HostAddress}}/api/c/Platforms/4/commands
+Accept: application/json
+
+###
+GET {{Product_HostAddress}}/api/c/Platforms/1/commands/1
+Accept: application/json
+
+###
+POST {{Product_HostAddress}}/api/c/Platforms/4/commands
+Content-Type: application/json
+Accept: application/json
+
+{
+  "HowTo": "Kubernetes",
+  "CommandLine": "Cloud Native Computing Foundation"
+}
