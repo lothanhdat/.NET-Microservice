@@ -64,3 +64,11 @@ dotnet tool install --global dotnet-ef --version 8.*
 dotnet ef migrations add initialmigration
 
 dotnet add package RabbitMQ.Client
+
+----
+chạy lại platforms-depl
+có edit một chút trong appsetting của platformservice
+
+dotnet add package Grpc.AspNetCore vao car 2 service service
+dotnet add package Grpc.Tools vao command service 
+dotnet add package Google.Protobuf vao command service
