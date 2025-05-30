@@ -2,9 +2,6 @@
 # @PlatformService_HostAddress = http://localhost:32642
 @Product_HostAddress = http://acme.com
 
-GET {{PlatformService_HostAddress}}/weatherforecast/
-Accept: application/json
-
 ###
 
 GET {{PlatformService_HostAddress}}/api/Platforms

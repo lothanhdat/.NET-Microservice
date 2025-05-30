@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
 using AutoMapper;
 using CommandsService.Models;
 using Grpc.Net.Client;
-using Microsoft.Extensions.Configuration;
 using PlatformService;
 
 namespace CommandsService.SyncDataServices.Grpc

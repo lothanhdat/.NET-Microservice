@@ -42,7 +42,7 @@ https://youtu.be/DgVjEo3OGBI?t=13009
 
 
 docker build -t lothanhdat95/commandservice .
-docker push lothanhdat95/commandservice
+docker push lothanhdat95/commandservicedocker push lothanhdat95/commandservice
 docker run -p 8080:8080 -d lothanhdat95/commandservice
 
 kubectl rollout restart deployment platforms-depl
@@ -57,7 +57,9 @@ kubectl apply -f ingress-srv.yaml
 kubectl get storageclass
 kubectl apply -f local-pvc.yaml
 kubectl get pvc
-kubectl create secret generic mysql --from-literal=SA_PASSWORD="pa55Word!" 
+kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55Word!" 
+kubectl apply -f mssql-plat-depl.yaml
+
 # luu y dat pass dung policy
 dotnet tool install --global dotnet-ef --version 8.*
 
@@ -69,6 +71,7 @@ dotnet add package RabbitMQ.Client
 chạy lại platforms-depl
 có edit một chút trong appsetting của platformservice
 
-dotnet add package Grpc.AspNetCore vao car 2 service service
+dotnet add package Grpc.AspNetCore vao platform
 dotnet add package Grpc.Tools vao command service 
 dotnet add package Google.Protobuf vao command service
+dotnet add package Grpc.Net.Client vao command service

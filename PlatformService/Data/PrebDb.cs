@@ -39,6 +39,7 @@ namespace PlatformService.Data
                 );
 
                 context.SaveChanges();
+                Console.WriteLine("--> Seeding Data Completed");
             }
             else
             {
