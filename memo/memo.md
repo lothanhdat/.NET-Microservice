@@ -46,6 +46,7 @@ docker push lothanhdat95/commandservicedocker push lothanhdat95/commandservice
 docker run -p 8080:8080 -d lothanhdat95/commandservice
 
 kubectl rollout restart deployment platforms-depl
+kubectl rollout restart deployment commands-depl
 kubectl delete deployment platforms-depl
 kubectl delete deployment commands-depl
 

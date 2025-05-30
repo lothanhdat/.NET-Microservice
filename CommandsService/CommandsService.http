@@ -37,7 +37,7 @@ GET {{Product_HostAddress}}/api/c/Platforms
 Accept: application/json
 ###
 
-GET {{Product_HostAddress}}/api/c/Platforms/4/commands
+GET {{Product_HostAddress}}/api/c/Platforms/3/commands
 Accept: application/json
 
 ###
@@ -45,7 +45,7 @@ GET {{Product_HostAddress}}/api/c/Platforms/1/commands/1
 Accept: application/json
 
 ###
-POST {{Product_HostAddress}}/api/c/Platforms/4/commands
+POST {{Product_HostAddress}}/api/c/Platforms/3/commands
 Content-Type: application/json
 Accept: application/json
 
