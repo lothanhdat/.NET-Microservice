@@ -664,6 +664,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "65c09897-b52c-4723-bdc5-2a5a36a7eb89",
 								"exec": [
 									"const response = pm.response.json();",
 									"",
@@ -692,8 +693,9 @@
 						{
 							"listen": "prerequest",
 							"script": {
+								"id": "12773379-67fb-410f-8799-0979899fe72b",
 								"exec": [
-									""
+									"// change script"
 								],
 								"type": "text/javascript",
 								"packages": {}
