@@ -2950,15 +2950,21 @@
 	],
 	"variable": [
 		{
-			"id": "a1cf424f-ee19-4174-a362-c063f359ddca",
 			"key": "baseUrl",
 			"value": "https://template.postman-echo.com",
 			"type": "string"
 		},
 		{
-			"id": "80f16209-2285-4a76-9e1c-9c4699c281ec",
 			"key": "apiKey",
 			"value": "OMpqVWAH.UC80wyXTtPwhDgAUdCTx6"
+		},
+		{
+			"key": "e2e_user_name_from",
+			"value": ""
+		},
+		{
+			"key": "e2e_user_account_id_from",
+			"value": ""
 		}
 	]
 }
