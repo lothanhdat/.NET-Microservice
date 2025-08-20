@@ -12,10 +12,12 @@
 				{
 					"listen": "test",
 					"script": {
+						"id": "af8b5636-6b9f-42fc-bbc0-fe69cb4ba389",
 						"exec": [
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -23,6 +25,15 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// test change ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "https://api.getpostman.com/me",
 					"protocol": "https",
