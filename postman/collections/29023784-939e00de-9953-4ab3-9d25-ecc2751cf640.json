@@ -15,6 +15,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "0e5bddbd-0f9b-4543-b18e-60bcc4a81da6",
 								"exec": [
 									"let response = pm.response.json();",
 									"",
@@ -34,7 +35,7 @@
 									"if (pm.response.code === 200) {",
 									"    pm.collectionVariables.set('apiKey', response.apiKey);",
 									"}",
-									""
+									"// test"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -43,6 +44,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
+								"id": "c8e5d05e-ee1f-4932-9880-578f1dd5908b",
 								"exec": [
 									""
 								],
