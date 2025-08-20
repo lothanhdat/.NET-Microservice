@@ -127,6 +127,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "776a5c4e-bedd-43f2-aafd-0cfc91395334",
 								"exec": [
 									"const response = pm.response.json();",
 									"",
@@ -156,6 +157,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
+								"id": "97303c71-89cd-4310-a5ad-f196b9cddb92",
 								"exec": [
 									"// Generate the payload data for the create user request",
 									"",
@@ -186,7 +188,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{{payload}}"
+							"raw": "{{payload}} // test"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/v1/accounts",
