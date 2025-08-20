@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Get authenticated user",
+			"name": "Get authenticated user AAA",
 			"event": [
 				{
 					"listen": "test",
