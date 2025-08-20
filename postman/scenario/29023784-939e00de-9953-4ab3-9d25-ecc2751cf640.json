@@ -46,7 +46,7 @@
 							"script": {
 								"id": "c8e5d05e-ee1f-4932-9880-578f1dd5908b",
 								"exec": [
-									""
+									"// test commit"
 								],
 								"type": "text/javascript",
 								"packages": {}
